@@ -16,6 +16,7 @@ play()
 			;;
 		2 )
 			echo "Option : Ladder";
+			
 			POS=$((POS+DICE));
 			echo "Current Position "$POS;
 			;;
@@ -25,11 +26,20 @@ play()
 			then
 				POS=$POS;
 			else
-				POS=$((POS-DICE));
+				if [[ $POS -lt 0 ]]; 
+				then
+					POS=0;
+				else
+					POS=$((POS-DICE));
+				fi
 			fi
 			echo "Current Position "$POS;
 			;;
 	esac
 }
-
-play
+while [[ $POS -lt 100 ]]; 
+do
+	play;
+	i=$((i+1));
+done
+# play
