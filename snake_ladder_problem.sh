@@ -16,8 +16,13 @@ play()
 			;;
 		2 )
 			echo "Option : Ladder";
+			if [[ $((POS+DICE)) -gt 100 ]]; 
+			then
+				POS=$POS;
+			else
+				POS=$((POS+DICE));
+			fi
 			
-			POS=$((POS+DICE));
 			echo "Current Position "$POS;
 			;;
 		3 )
