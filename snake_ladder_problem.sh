@@ -1,3 +1,3 @@
 #! /bin/bash
 
-echo "Welcome to Snake-Ladder Simulation";
+echo "Welcome to Snake-Ladder Simulation"; 
